@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 2rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(43, 43, 43);
+  color: white;
+  overflow: hidden;
+}
+
+/* select page */
+.clockSelect {
+  display: grid;
+  gap: 20px;
+}
+.clockSelectP {
+  text-align: center;
+}
+button {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  color: whitesmoke;
+}
+.digitalClockBtn {
+  background-color: rgba(108, 108, 218, 0.556);
+}
+.analogClockBtn {
+  background-color: rgba(202, 202, 157, 0.536);
+}
+
+/* digital Clock */
+.digitalClockCover {
+  display: none;
+}
+.digitalClock {
+  padding: 10px;
+  border: 2px solid blue;
+}
+.dayDetails {
+  font-size: 0.85rem;
+}
+.time {
+  font-size: 2rem;
+}
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.125));
+}
+.pm {
+  background-color: blue;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Analog clock */
+.analogClockCover {
+  display: none;
+}
+.analogClock {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border: 5px solid rgb(255, 255, 55);
+  border-radius: 50%;
+}
+
+.secondsHand {
+  height: 130px;
+  width: 3px;
+  background-color: red;
+  position: absolute;
+
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 1;
+}
+.minutesHand {
+  height: 100px;
+  width: 5px;
+  background-color: rgb(185, 140, 176);
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.hoursHand {
+  height: 80px;
+  width: 7px;
+  background-color: rgb(137, 137, 207);
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.one {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(30deg);
+}
+.two {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(60deg);
+}
+
+.three {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.four {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(120deg);
+}
+
+.five {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(150deg);
+}
+.six {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.seven {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(210deg);
+}
+.eight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(240deg);
+}
+
+.nine {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+.ten {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(300deg);
+}
+.eleven {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  transform: rotate(330deg);
+}
+.twelve {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* close btn */
+
+.closeBtn {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* utilities */
+
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
