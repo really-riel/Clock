@@ -31,6 +31,7 @@ const initApp = () => {
     hoursHand.style.transform = `rotate(${hoursInterval}deg)`;
 
     // digital clock
+    let dayTime = hours < 12 ? "AM" : "PM";
     hours = hours > 12 ? hours - 12 : hours;
 
     seconds = seconds < 10 ? `0${seconds}` : seconds;
@@ -68,7 +69,7 @@ const initApp = () => {
     <p class="dayDetails">${daySpecific}, ${monthSpecific} ${date}, ${year}</p>
     <div class="cover">
         <p class="time">${hours}:${minutes}:${seconds}</p>
-        <p class="pm">pm</p>
+        <p class="pm">${dayTime}</p>
     
     `;
 
